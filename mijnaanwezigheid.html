@@ -1,0 +1,138 @@
+<!doctype html>
+<html class="zc-html">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitmin | aanwezigheid</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+  <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+    .zc-body {
+      background-color: #2B313B;
+    }
+
+    .chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 530px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+​
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="C:\bit-academy\Jaar 1\Deepdive\CSS Frameworks Deep Dive\Foundation for a dashboard\index.html">Bitmin</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li><a href="C:\bit-academy\Jaar 1\Deepdive\CSS Frameworks Deep Dive\Foundation for a dashboard\portfolio.html">Portifolio</a></li>
+    </ul>
+  </section>
+</nav>
+
+<body class="zc-body">
+  ​
+  <div id="myChart" class="chart--container">
+  </div>
+
+  <script>
+    let chartConfig = {
+      type: 'pie',
+      backgroundColor: '#2B313B',
+      title: {
+        text: 'Global Browser Usage',
+        align: 'left',
+        fontColor: '#fff',
+        fontFamily: 'Open Sans',
+        fontSize: '25px',
+        offsetX: '10px',
+      },
+      subtitle: {
+        text: 'June 2020',
+        align: 'left',
+        fontColor: '#8e99a9',
+        fontFamily: 'Open Sans',
+        fontSize: '16px',
+        offsetX: '10px',
+        offsetY: '10px'
+      },
+      plot: {
+        tooltip: {
+          text: '%npv%',
+          padding: '5px 10px',
+          fontFamily: 'Open Sans',
+          fontSize: '18px'
+        },
+        valueBox: {
+          text: '%t\n%npv%',
+          fontFamily: 'Open Sans',
+          placement: 'out'
+        },
+        animation: {
+          effect: 'ANIMATION_EXPAND_VERTICAL',
+          method: 'ANIMATION_REGULAR_EASE_OUT',
+          sequence: 'ANIMATION_BY_PLOT',
+          speed: 500
+        },
+        borderColor: '#2B313B',
+        borderWidth: '5px'
+      },
+      plotarea: {
+        margin: '20px 0 0 0'
+      },
+      source: {
+        text: 'Source: gs.statcounter.com',
+        fontColor: '#8e99a9',
+        fontFamily: 'Open Sans',
+        textAlign: 'left'
+      },
+      series: [{
+          text: 'Ziek',
+          values: [4.8],
+          backgroundColor: '#50ADF5'
+        },
+        {
+          text: 'Op tijd',
+          values: [63.69],
+          backgroundColor: '#FF7965'
+        },
+        {
+          text: 'Te laat',
+          values: [4.64],
+          backgroundColor: '#FFCB45'
+        },
+        {
+          text: 'Ongeoorloofd afwezig',
+          values: [15.15],
+          backgroundColor: '#6877e5'
+        },
+        {
+          text: 'Geoorloofd afwezig',
+          values: [11.72],
+          backgroundColor: '#6FB07F'
+        }
+      ]
+    };
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig,
+      height: '100%',
+      width: '100%',
+    });
+  </script>
+</body>
+
+</html>

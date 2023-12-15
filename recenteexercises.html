@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitmin | Recente Exercises</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+  <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .zc-body {
+      background: #252d47;
+    }
+
+    @media screen and (min-width: 768px) {
+      .zc-demo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="C:\bit-academy\Jaar 1\Deepdive\CSS Frameworks Deep Dive\Foundation for a dashboard\index.html">Bitmin</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+  
+    <section class="top-bar-section">
+      <ul class="right">
+        <li><a href="C:\bit-academy\Jaar 1\Deepdive\CSS Frameworks Deep Dive\Foundation for a dashboard\portfolio.html">Portifolio</a></li>
+      </ul>
+    </section>
+  </nav>
+</body>
+
+<body class="zc-body">
+
+  <div class="zc-demo">
+    <section id="chart1"></section>
+    <section id="chart2"></section>
+    <section id="chart3"></section>
+    <section id="chart4"></section>
+  </div>
+
+  <a rel="noopener" class="zc-ref">Powered by Bitmin</a>
+
+  <script>
+    let chart1Id = 'chart1';
+    let chart2Id = 'chart2';
+    let chart3Id = 'chart3';
+   
+
+    let white = '#fff';
+    let transparent = 'transparent';
+    let lightBlue = '#53688b';
+    let lightPink = '#c3a9c6';
+    let lightGreen = '#82ebc1';
+
+    let chart1Data = {
+      type: 'radar',
+      globals: {
+        fontFamily: 'Nunito',
+      },
+      backgroundColor: transparent,
+      title: {
+        text: 'Front-End',
+        align: 'left',
+        fontColor: white,
+      },
+      legend: {
+        backgroundColor: transparent,
+        borderWidth: '0px',
+        marker: {
+          type: 'circle',
+          borderWidth: '0px',
+        },
+        x: '16px',
+        y: '48px',
+      },
+      plot: {
+        aspect: 'area',
+        alphaArea: '.6',
+      },
+      scaleK: {
+        labels: [
+          'Front end recap',
+          'JavaScript Beginner',
+          'HTML/CSS Advanced',
+          'Java Beginner',
+          'Javascript Novice',
+          'Bootstrap',
+          'Recap HTML/CSS/JS',
+          'Web rookie',
+          'HTML/CSS Beginner',
+        ],
+        item: {
+          fontColor: white,
+        },
+        guide: {
+          lineStyle: 'solid',
+          lineColor: white,
+          backgroundColor: transparent,
+        },
+        tick: {
+          lineColor: white,
+        },
+      },
+      scaleV: {
+        guide: {
+          backgroundColor: transparent,
+          lineColor: white,
+          lineStyle: 'solid',
+        },
+        item: {
+          visible: false,
+        },
+      },
+      series: [{
+          text: 'Gemaakte exercises',
+          values: [3, 27, 27, 27, 22, 20, 22, 20, 27],
+          backgroundColor: lightBlue,
+          lineColor: lightBlue,
+          legendItem: {
+            fontColor: lightBlue,
+          },
+        },
+        {
+          text: 'Openstaande exercises',
+          values: [24, 14, 20, 16, 24, 12, 14, 24, 10],
+          backgroundColor: lightPink,
+          lineColor: lightPink,
+          legendItem: {
+            fontColor: lightPink,
+          },
+        },
+      ],
+    };
+
+    let chart2Data = {
+      type: 'radar',
+      globals: {
+        fontFamily: 'Nunito',
+      },
+      backgroundColor: transparent,
+      title: {
+        text: 'Back-End',
+        align: 'left',
+        fontColor: white,
+      },
+      legend: {
+        backgroundColor: transparent,
+        borderWidth: '0px',
+        marker: {
+          type: 'circle',
+          borderWidth: '0px',
+        },
+        x: '16px',
+        y: '48px',
+      },
+      plot: {
+        aspect: 'area',
+        alphaArea: '.6',
+      },
+      scaleK: {
+        guide: {
+          lineStyle: 'solid',
+          lineColor: white,
+          backgroundColor: transparent,
+        },
+        item: {
+          fontColor: white,
+          rules: [{
+            rule: '%i == 0 || %i == 2 || %i == 4 || %i == 7',
+            fontColor: lightPink,
+          }, ],
+        },
+        labels: [
+          'PHP Beginner',
+          'PHP Novice',
+          'Databases Beginner',
+          'HTML/CSS Beginner',
+          'PHP Web',
+          'Database PDO',
+          'PHP Togheter',
+          'Backend Eindproject',
+          'Regex',
+        ],
+        tick: {
+          lineColor: white,
+        },
+      },
+      scaleV: {
+        guide: {
+          backgroundColor: transparent,
+          lineColor: white,
+          lineStyle: 'solid',
+        },
+        item: {
+          visible: false,
+        },
+      },
+      series: [{
+          text: 'Gemaakte exercises',
+          values: [3, 27, 27, 27, 22, 20, 22, 20, 27],
+          backgroundColor: lightBlue,
+          lineColor: lightBlue,
+          legendItem: {
+            fontColor: lightBlue,
+          },
+        },
+        {
+          text: 'Openstaande exercises',
+          values: [24, 14, 20, 16, 24, 12, 14, 24, 10],
+          backgroundColor: lightPink,
+          lineColor: lightPink,
+          legendItem: {
+            fontColor: lightPink,
+          },
+          valueBox: {
+            backgroundColor: 'var(--purple)',
+            borderColor: lightPink,
+            borderRadius: '8px',
+            borderWidth: '2px',
+            fontColor: 'white',
+            padding: '2px 8px',
+            shadow: false,
+          },
+        },
+      ],
+    };
+
+    let chart3Data = {
+      type: 'radar',
+      globals: {
+        fontFamily: 'Nunito',
+      },
+      backgroundColor: transparent,
+      title: {
+        text: 'Data analist',
+        align: 'left',
+        fontColor: white,
+      },
+      legend: {
+        backgroundColor: transparent,
+        borderWidth: '0px',
+        marker: {
+          type: 'circle',
+          borderWidth: '0px',
+        },
+        x: '16px',
+        y: '48px',
+      },
+      plot: {
+        aspect: 'area',
+        alphaArea: '.6',
+      },
+      scaleK: {
+        guide: {
+          lineStyle: 'solid',
+          lineColor: white,
+          backgroundColor: transparent,
+        },
+        item: {
+          fontColor: white,
+        },
+        labels: [
+          'Databases voor Analisten',
+          'Python voor Analisten',
+          'Power BI Beginner',
+          'Visualiseren',
+          'Interpreteren',
+          'Business Case',
+          'Manipuleren',
+          'Data Analytics Project',
+          'Python Beginner',
+        ],
+        tick: {
+          lineColor: white,
+        },
+      },
+      scaleV: {
+        guide: {
+          lineStyle: 'solid',
+          lineColor: white,
+          backgroundColor: transparent,
+        },
+        item: {
+          visible: false,
+        },
+      },
+      series: [{
+          text: 'Gemaakte exercises',
+          values: [3, 27, 27, 27, 22, 20, 22, 20, 27],
+          backgroundColor: lightBlue,
+          legendItem: {
+            fontColor: lightBlue,
+          },
+          lineColor: lightBlue,
+        },
+        {
+          text: 'Openstaande exercises',
+          values: [24, 14, 20, 16, 24, 12, 14, 24, 10],
+          backgroundColor: lightPink,
+          legendItem: {
+            fontColor: lightPink,
+          },
+          lineColor: lightPink,
+        },
+        {
+          text: 'Type 3',
+          values: [5, 25, 12, 6, 8, 10, 25, 3, 10],
+          backgroundColor: lightGreen,
+          legendItem: {
+            fontColor: lightGreen,
+          },
+          lineColor: lightGreen,
+        },
+      ],
+    };
+    zingchart.render({
+      id: chart1Id,
+      data: chart1Data,
+      height: '560px',
+      width: '100%',
+    });
+
+    zingchart.render({
+      id: chart2Id,
+      data: chart2Data,
+      height: '560px',
+      width: '100%',
+    });
+
+    zingchart.render({
+      id: chart3Id,
+      data: chart3Data,
+      height: '560px',
+      width: '100%',
+    });
+
+    zingchart.render({
+      id: chart4Id,
+      data: chart4Data,
+      height: '560px',
+      width: '100%',
+    });
+  </script>
+</body>
+
+</html>
