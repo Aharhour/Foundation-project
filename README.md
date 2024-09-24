@@ -1,4 +1,4 @@
-# Welcome to Xeno
+# Welcome to my Foundation project
 
 ## About
 
